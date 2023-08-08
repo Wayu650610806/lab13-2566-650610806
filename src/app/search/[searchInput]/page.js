@@ -18,14 +18,13 @@ export default function SearchResultPage({ params }) {
       .toLocaleLowerCase()
       .includes(processedSearchInput.toLocaleLowerCase())
   );
+  const num = filteredMovies.length;
   return (
     <div>
       <p className="fw-bold fs-4 text-center my-0">
         Searching &quot; {processedSearchInput} &quot;
       </p>
-      <p className="fw-bold fs-4 text-center">
-        Found {filteredMovies.length} result(s)
-      </p>
+      <p className="fw-bold fs-4 text-center">Found {num} result(s)</p>
       {/* Use  "filteredMovies" variable to map-loop rendering MovieRow component */}
       {filteredMovies.map((movie, i) => (
         <MovieRow
