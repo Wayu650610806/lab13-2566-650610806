@@ -5,8 +5,8 @@ import { movieDB } from "@/libs/movieDB";
 
 export default function SearchResultPage({ params }) {
   //tip1 : before filtering movie, replace all "%20" with " " (space) in the input
-
-  const processedSearchInput = params.searchInput.replaceAll("%20", " ");
+  const searchInput = params.searchInput;
+  const processedSearchInput = searchInput.replaceAll("%20", " ");
 
   // tip2 : Use "includes" string method to check substring
   // Example : "ABC".includes("AB") -> return true
